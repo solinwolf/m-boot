@@ -1,4 +1,10 @@
 #!/bin/sh
+if [ $# != 0 ]
+then
+    echo "build.sh takes no argument"
+    exit 0
+fi
+
 make 
 mv -f u-boot.bin bin/
 cd bin/
